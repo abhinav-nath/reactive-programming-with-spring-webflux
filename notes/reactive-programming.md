@@ -42,10 +42,10 @@ These are translated to below methods:
 3. onError() - for Error event
 
 ## Success flow
-![Reactive Programming - Success flow](./images/1_data-flow-as-an-event-driven-stream_success-flow.png)
+![Reactive Programming - Success flow](./images/data-flow-as-an-event-driven-stream_1_success-flow.png)
 
 ## Error flow
-![Reactive Programming - Error flow](./images/2_data-flow-as-an-event-driven-stream_error-flow.png)
+![Reactive Programming - Error flow](./images/data-flow-as-an-event-driven-stream_2_error-flow.png)
 
 ## No Data flow
-![Reactive Programming - No Data flow](./images/3_data-flow-as-an-event-driven-stream_no-data-flow.png)
+![Reactive Programming - No Data flow](./images/data-flow-as-an-event-driven-stream_3_no-data-flow.png)

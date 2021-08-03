@@ -2,7 +2,7 @@
 
 * New programming paradigm
 * Asynchronous and non-blocking by nature
-* Data flow as an **Event/Message driven** stream
+* Data flow as an **Event/Message driven** stream otherwise known as a **Reactive Stream**.
 * Functional style code
 * Supports **Back Pressure** on Data Streams
 
@@ -54,3 +54,7 @@ These are translated to below methods:
 
 ## No Data flow
 ![Reactive Programming - No Data flow](./images/data-flow-as-an-event-driven-stream_3_no-data-flow.png)
+
+# More About Reactive Programming
+
+* Reactive Stream Specification

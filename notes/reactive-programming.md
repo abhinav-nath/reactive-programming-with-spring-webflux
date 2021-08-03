@@ -27,9 +27,14 @@ List<Item> items = itemRepository.getAllItems();
 
 ## Reactive Programming
 
+Reactive Programming supports `Back-Pressure` on Data Streams.
+
+If the data source is producing more data than we expect then there is a way our Application can provide a feedback
+to the data source stating "you need to slow down until I catch up".
+
 Data flows as an an Event/Message driven stream.
 
-There are three 2 flows:
+There are three flows:
 
 1. Data flow
 2. Error flow

@@ -1,6 +1,6 @@
-# Reactive Stream Specification
+# Reactive Streams Specification
 
-Specification or Rules for a Reactive Stream.
+Specification or Rules for Reactive Streams.
 
 https://github.com/reactive-streams/reactive-streams-jvm
 
@@ -61,3 +61,15 @@ public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
 
 # Publisher Subscriber Event flow - Cancel Subscription
 ![Reactive Programming - No Data flow](./images/publisher-subscriber-event-flow_2_cancel.png)
+
+# Reactive Libraries
+
+Reactive libraries provide the implementation of the Reactive Streams Specification.
+
+Few of the libraries are:
+
+1. RxJava
+2. Reactor or Project Reactor
+   - Built and maintained by **Pivotal** (the team behind Spring and Spring Boot)
+   - Default library that comes in Sprint Boot to write Reactive Code.
+4. Flow Class - JDK 9

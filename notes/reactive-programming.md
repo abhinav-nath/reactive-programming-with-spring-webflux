@@ -57,4 +57,4 @@ These are translated to below methods:
 
 # More About Reactive Programming
 
-* [Reactive Stream Specification](./reactive-stream-specification.md "Reactive Stream Specification")
+* [Reactive Streams Specification](./reactive-streams-specification.md "Reactive Streams Specification")

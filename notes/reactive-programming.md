@@ -19,7 +19,7 @@ A real world example could be two persons chatting on WhatsApp.
 
 Consider the following code to retrieve data from the DB:
 
-```
+```java
 List<Item> items = itemRepository.getAllItems();
 ```
 

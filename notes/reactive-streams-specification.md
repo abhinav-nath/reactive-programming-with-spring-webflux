@@ -69,7 +69,7 @@ Reactive libraries provide the implementation of the Reactive Streams Specificat
 Few of the libraries are:
 
 1. RxJava
-2. Reactor or Project Reactor
-   - Built and maintained by **Pivotal** (the team behind Spring and Spring Boot)
-   - Default library that comes in Sprint Boot to write Reactive Code.
-4. Flow Class - JDK 9
+2. [Reactor or Project Reactor](./project-reactor.md "Project Reactor")
+   * Built and maintained by **Pivotal** (the team behind Spring and Spring Boot)
+   * Default library that comes in Sprint Boot to write Reactive Code
+3. Flow Class - JDK 9

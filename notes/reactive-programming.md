@@ -23,7 +23,7 @@ Consider the following code to retrieve data from the DB:
 List<Item> items = itemRepository.getAllItems();
 ```
 
-
+![Imperative Programming](./images/imperative-programming.png)
 
 ## Reactive Programming
 
@@ -42,9 +42,10 @@ These are translated to below methods:
 3. onError() - for Error event
 
 ## Success flow
-
+![Reactive Programming - Success flow](./images/1_data-flow-as-an-event-driven-stream_success-flow.png)
 
 ## Error flow
-
+![Reactive Programming - Error flow](./images/2_data-flow-as-an-event-driven-stream_error-flow.png)
 
 ## No Data flow
+![Reactive Programming - No Data flow](./images/3_data-flow-as-an-event-driven-stream_no-data-flow.png)

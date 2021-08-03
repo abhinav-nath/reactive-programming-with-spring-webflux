@@ -24,6 +24,20 @@ implements CorePublisher<T>
 
 ![Flux](./images/flux.png)
 
+## Code samples:
+
+### Success
+
+![Flux Success Code](./images/flux_01_success_code.png)
+
+![Flux Success Log](./images/flux_02_success_log.png)
+
+### Error
+
+![Flux Success Code](./images/flux_03_error_code.png)
+
+![Flux Success Log](./images/flux_04_error_log.png)
+
 ## Mono
 
 ```java
@@ -35,4 +49,4 @@ implements CorePublisher<T>
 * A Reactive Streams Publisher with basic rx operators that emits at most one item via the onNext signal then terminates with an onComplete signal (successful Mono, with or without value), or only emits a single onError signal (failed Mono).
 * Mono represents 0 to 1 elements.
 
-![Flux](./images/mono.png)
+![Mono](./images/mono.png)

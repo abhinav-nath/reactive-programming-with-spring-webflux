@@ -1,4 +1,4 @@
-package com.codecafe.reactive;
+package com.codecafe.reactive.flux_mono_playground;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.ConnectableFlux;

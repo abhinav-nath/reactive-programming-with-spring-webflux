@@ -7,6 +7,8 @@ import reactor.test.StepVerifier;
 import java.util.Arrays;
 import java.util.List;
 
+import static reactor.core.scheduler.Schedulers.parallel;
+
 public class FluxTransformTest {
 
     List<String> names = Arrays.asList("John", "Tony", "Stacy", "Sarah");
@@ -59,6 +61,63 @@ public class FluxTransformTest {
 
         StepVerifier.create(namesFlux)
                 .expectNext("STACY", "SARAH")
+                .verifyComplete();
+    }
+
+    @Test
+    public void transformFluxUsingFlatMap() {
+
+        Flux<String> stringFlux = Flux.fromIterable(Arrays.asList("A", "B", "C", "D", "E", "F"))
+                .flatMap(e -> {
+                    return Flux.fromIterable(convertToList(e));
+                }) // db call or external service call that returns a flux
+                .log();
+
+        StepVerifier.create(stringFlux)
+                .expectNextCount(12)
+                .verifyComplete();
+    }
+
+    private List<String> convertToList(String str) {
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return Arrays.asList(str, "newValue");
+    }
+
+    @Test
+    public void transformFluxUsingFlatMap_inParallel() {
+
+        Flux<String> stringFlux = Flux.fromIterable(Arrays.asList("A", "B", "C", "D", "E", "F"))
+                .window(2) // Flux<Flux<String>>
+                .flatMap((s) ->
+                        s.map(this::convertToList).subscribeOn(parallel()))
+                .flatMap(s -> Flux.fromIterable(s))
+                .log();
+
+        StepVerifier.create(stringFlux)
+                .expectNextCount(12)
+                .verifyComplete();
+    }
+
+    @Test
+    public void transformFluxUsingFlatMap_parallel_maintainOrder() {
+
+        // Use flatMapSequential() to maintain order
+
+        Flux<String> stringFlux = Flux.fromIterable(Arrays.asList("A", "B", "C", "D", "E", "F"))
+                .window(2) // Flux<Flux<String>>
+                .flatMapSequential((s) ->
+                        s.map(this::convertToList).subscribeOn(parallel()))
+                .flatMap(s -> Flux.fromIterable(s))
+                .log();
+
+        StepVerifier.create(stringFlux)
+                .expectNextCount(12)
                 .verifyComplete();
     }
 

@@ -34,9 +34,9 @@ implements CorePublisher<T>
 
 ### Error
 
-![Flux Success Code](./images/flux_03_error_code.png)
+![Flux Error Code](./images/flux_03_error_code.png)
 
-![Flux Success Log](./images/flux_04_error_log.png)
+![Flux Error Log](./images/flux_04_error_log.png)
 
 ## Mono
 
@@ -50,3 +50,17 @@ implements CorePublisher<T>
 * Mono represents 0 to 1 elements.
 
 ![Mono](./images/mono.png)
+
+## Code samples:
+
+### Success
+
+![Mono Success Code](./images/mono_01_success_code.png)
+
+![Mono Success Log](./images/mono_02_success_log.png)
+
+### Error
+
+![Mono Error Code](./images/mono_03_error_code.png)
+
+![Mono Error Log](./images/mono_04_error_log.png)

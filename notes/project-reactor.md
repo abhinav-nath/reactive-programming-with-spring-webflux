@@ -2,6 +2,13 @@
 
 https://projectreactor.io/
 
+Project Reactor 3.x is a library that is built around the Reactive Streams specification,
+bringing the reactive programming paradigm to JVM.
+
+> Reactor is a full, non-blocking reactive programming framework that manages back
+> pressure and integrates interaction with the Java 8 functional APIs (CompletableFuture,
+> Stream, and Duration)
+
 * reactor-core
   - core library for Project Reactor
   - requires Java 8 (minimum)
@@ -9,8 +16,16 @@ https://projectreactor.io/
 * reactor-test
 * reactor-netty
 
+## Spring WebFlux
 
-## [Flux](Flux "https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html")
+Spring WebFlux was added in Spring 5.0
+
+It is a fully non-blocking framework that relies on Project Reactor, which supports reactive streams back pressure
+and runs on servers like Netty and Undertow, and Servlet 3.1+ containers.
+
+### Reactor provides two reactive composable asynchronous APIs:
+
+## [Flux](Flux "https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html") [N] (for N elements)
 
 ```java
 public abstract class Flux<T>
@@ -38,7 +53,7 @@ implements CorePublisher<T>
 
 ![Flux Error Log](./images/flux_04_error_log.png)
 
-## Mono
+## [Mono](Mono "https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html") [0|1] (for 0 or 1 elements)
 
 ```java
 public abstract class Mono<T>

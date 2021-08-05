@@ -1,5 +1,10 @@
 # Reactive Programming
 
+> **Reactive programming** is a paradigm that is an event-based model, where data is pushed to the consumer as it becomes
+> available; it deals with asynchronous sequences of events. Offering fully asynchronous and
+> non-blocking patterns, reactive programming is an alternative to the limited ways of doing
+> async code in the JDK (callbacks, APIs, and the Future<V> interface).
+
 * New programming paradigm
 * Asynchronous and non-blocking by nature
 * Data flow as an **Event/Message driven** stream otherwise known as a **Reactive Stream**.
